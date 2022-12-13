@@ -3,13 +3,12 @@ import Container from "@mui/system/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { autocompleteClasses } from "@mui/material";
 
 const imagens = [
   {
     id: 1,
     image:
-      "https://images.unsplash.com/photo-1578545565737-22fb1162448f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=576&q=80",
+      "https://images.unsplash.com/photo-1660314002642-77bbfe3e9b48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
     title: "Trilha na Montanha",
     description:
       "Loren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy",
@@ -17,24 +16,24 @@ const imagens = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1614213704713-9c3afa035941?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=547&q=80",
-    title: "Ciclismo",
+      "https://images.unsplash.com/photo-1500579886065-5a7705cbf1f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+    title: "Escalada",
     description:
       "Loren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqew sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqew",
   },
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1626745844804-bf833f5838e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-    title: "Comidas tipicas",
+      "https://images.unsplash.com/photo-1600757490188-1eb2bab4cf4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=559&q=80",
+    title: "Cavalgada",
     description:
       "Loren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqew",
   },
   {
     id: 4,
     image:
-      "https://images.unsplash.com/photo-1606385077626-79ab87df3ba1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=532&q=80",
-    title: "Batata",
+      "https://images.unsplash.com/photo-1664223987460-e5fd70a455ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+    title: "Trilha na Floresta",
     description:
       "Loren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqew qwjhuqwejuhqwuiwqe quiqweqew Loren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqewLoren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqew qwjhuqwejuhqwuiwqe quiqweqew Loren akjajkadjklaklsajhasdbjkwqeqwegyas sakl dqjhid akdq d ajdqdjka qaqquy  qwjhuqwejuhqwuiwqe quiqweqew",
   },
@@ -49,7 +48,6 @@ function Carrousel() {
       alignItems={"center"}
       minHeight={"110vh"}
       alignContent={"center"}
-      sx={{ backgroundColor: "red" }}
     >
       <Carousel
         sx={{ width: "100%" }}
@@ -81,17 +79,16 @@ function Item({ item }) {
       <Grid
         container
         flexDirection="row"
+        flexWrap="wrap"
         alignContent="center"
         alignItems="flex-start"
-        justifyContent="space-evenly"
-        sx={{ width: "100%", maxHeight: "90vh", background: "blue" }}
+        justifyContent="space-between"
+        sx={{ width: "100%", height: "90vh" }}
       >
         <Box
           sx={{
-            minWidth: "40vw",
-            minHeight: "50vh",
-            maxHeight: "90vh",
-            background: "green",
+            width: "40vw",
+            height: "90vh",
             overflow: "hidden",
           }}
         >
@@ -112,8 +109,7 @@ function Item({ item }) {
           sx={{
             width: "30vw",
             height: "350px",
-            background: "white",
-            paddingTop: "10rem",
+            marginTop: "10rem",
             overflow: "auto",
           }}
         >
